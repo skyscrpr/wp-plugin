@@ -14,6 +14,6 @@ Thin plugin automatically includes Skyscraper.io javascript into your blog with 
 == Installation ==
 
 1. Upload the `skyscraper` folder to `/wp-content/plugins/`
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. If you don't already have a Skyscraper account, sign up at [skyscraper.io](http://www.skyscraper.io/)
-1. Configure the plugin in the WordPress Settings > Skyscraper menu
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. If you don't already have a Skyscraper account, sign up at [skyscraper.io](http://www.skyscraper.io/)
+4. Configure the plugin in the WordPress Settings > Skyscraper menu
