@@ -33,5 +33,5 @@ We're working on this feature, including support for Ad Spaces as WordPress widg
 
 == Changelog ==
 
-= 0.0.2 =
+= 1.0.2 =
 * Improves how the Skyscraper javascript is injected
