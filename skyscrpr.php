@@ -21,7 +21,7 @@ function skyscrpr_widget_script() {
     $script = "<!-- Skyscraper.io EMK Widget -->".
           "<script type='text/javascript'>".
           "  var skyscrprSettings = {".
-          "    site_id: '". addslashes( $skyscrpr_site_id ). "',". 
+          "    site_id: '". addslashes( $skyscrpr_site_id ). "',".
           "  };".
           "</script>".
           "<script>".
@@ -62,24 +62,7 @@ function skyscrpr_script() {
             site_id: '<?php print addslashes( $skyscrpr_site_id ); ?>',
           };
         </script>
-
-        <script>
-          (function() {
-            function async_load() {
-              var scr = document.createElement('script');
-              scr.type = 'text/javascript';
-              scr.async = true;
-              scr.src = '//install-skyscrpr-com.s3.amazonaws.com/skyscrpr.js';
-              var a = document.getElementsByTagName('script')[0];
-              a.parentNode.insertBefore(scr, a);
-            }
-            if (window.attachEvent) {
-              window.attachEvent('onload', async_load);
-            } else {
-              window.addEventListener('load', async_load, false);
-            }
-          })();
-        </script>
+        <script type='text/javascript' src='//install-skyscrpr-com.s3.amazonaws.com/skyscrpr.js'></script>
   <!-- end Skyscraper.io -->
 <?php
   }
@@ -132,8 +115,8 @@ function skyscrpr_options() { ?>
             <td>
               <input id="skyscrpr-skyscrpr_widget_title" type="text" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>" class="regular-text"/>
             </td>
-          <?php 
-          } 
+          <?php
+          }
           else {?>
              <input type="hidden" name="skyscrpr_widget_permlink" value="<?php print get_option( "skyscrpr_widget_permlink" ); ?>">
              <input type="hidden" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>">
@@ -213,7 +196,7 @@ function remove_widget() {
   $skyscrpr_widget_page_id = get_option("skyscrpr_widget_page_id" );
   if ($skyscrpr_widget_page_id) {
     update_option('skyscrpr_widget_enabled', false);
-    wp_delete_post($skyscrpr_widget_page_id, true ); 
+    wp_delete_post($skyscrpr_widget_page_id, true );
   }
 }
 
@@ -306,5 +289,5 @@ add_shortcode('skyscraper-advertise-here', 'skyscrpr_widget_script' );
 // add the <script/> tags to the footer
 
 if( SKYSCRPR_ENABLED) {
-  add_action( "wp_footer", "skyscrpr_script" );
+  add_action( "wp_head", "skyscrpr_script" );
 }
