@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Skyscraper.io
-Version: 0.1
+Version: 1.0.2
 Description: Skyscraper is an all-in-one revenue management platform built for websites.
 Author: Skyscraper
 Author URI: https://www.skyscraper.io/r/903b14a
@@ -164,14 +164,12 @@ function update_post($post_id, $key,$value){
  */
 
 function create_widget_page() {
-  $skyscrpr_widget_page_id = get_option("skyscrpr_widget_page_id" );
-  if ($skyscrpr_widget_page_id == false) {
-    $new_page = array(
+  $new_page = array(
       'slug' => 'media-kit',
       'title' => 'Advertise Here',
       'content' => skyscrpr_widget_script()
-    );
-    $new_page_id = wp_insert_post( array(
+  );
+  $new_page_id = wp_insert_post( array(
             'post_title' => $new_page['title'],
             'post_type'     => 'page',
             'post_name'      => $new_page['slug'],
@@ -181,11 +179,10 @@ function create_widget_page() {
             'post_status' => 'publish',
             'post_author' => 1,
     'menu_order' => 0
-    ));
-    update_option('skyscrpr_widget_permlink', $new_page['slug']);
-    update_option('skyscrpr_widget_title', $new_page['title']);
-    update_option('skyscrpr_widget_page_id', $new_page_id);
-  }
+  ));
+  update_option('skyscrpr_widget_permlink', $new_page['slug']);
+  update_option('skyscrpr_widget_title', $new_page['title']);
+  update_option('skyscrpr_widget_page_id', $new_page_id);
 }
 
 /**
