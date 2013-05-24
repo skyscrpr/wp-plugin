@@ -2,9 +2,9 @@
 /*
 Plugin Name: Skyscraper.io
 Version: 0.1
-Description: Include skyscraper.io script in your blog without effort
+Description: Skyscraper is an all-in-one revenue management platform built for websites.
 Author: Skyscraper
-Author URI: http://www.skyscraper.io
+Author URI: https://www.skyscraper.io/r/903b14a
 */
 
 define( 'SKYSCRPR_MIN_WORDPRESS_REQUIRED', "2.7" );

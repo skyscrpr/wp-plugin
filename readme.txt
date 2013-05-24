@@ -5,6 +5,8 @@ Tags: revenue, ads, advertising, sales, sponsored, affiliate, marketing, links, 
 Requires at least: 2.7
 Tested up to: 3.3.1
 Stable tag: 1.0.2
+License: GPLv2
+Donate link: -
 
 Skyscraper is an all-in-one revenue management platform built for websites.
 
@@ -31,7 +33,16 @@ This plugin is under active and frequent development.
 
 We're working on this feature, including support for Ad Spaces as WordPress widgets. Currently, you need to paste the code snippet for each Ad Space (found on your Ad Spaces page) into your site where you'd like the advertisement to appear. You can use the Text widget for this.
 
+== Screenshots == 
+
+1. skyscraper-wp-plugin-1.png
+
 == Changelog ==
 
-= 1.0.2 =
+= .1 =
 * Improves how the Skyscraper javascript is injected
+
+== Upgrade Notice ==
+
+= .1 =
+Speed increases
