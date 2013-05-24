@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Skyscraper.io
-Version: 0.0.2
+Version: 1.0.2
 Description: Include skyscraper.io script in your blog without effort
 Author: Skyscraper
 Author URI: http://www.skyscraper.io
