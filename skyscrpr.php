@@ -96,7 +96,7 @@ function skyscrpr_options() { ?>
   if( ! SKYSCRPR_WORDPRESS_VERSION_SUPPORTED ) {
 ?>
     <p style="width: 50%;">
-      Thanks for your interest in Skyscraper!  Unfortunately, the VigLink plugin
+      Thanks for your interest in Skyscraper!  Unfortunately, the Skyscraper plugin
       requires WordPress <?php print SKYSCRPR_MIN_WORDPRESS_REQUIRED ?> or newer.
       Please try again once you've upgraded.
     </p>
