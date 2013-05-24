@@ -1,5 +1,5 @@
 === Skyscraper.io ===
-Contributors: Skyscraper
+Contributors: rafaelchacon
 Tags: ads, affiliate, marketing, links, monetization, javascript, easy
 Requires at least: 2.7
 Tested up to: 3.3.1
