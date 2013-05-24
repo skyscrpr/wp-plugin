@@ -9,7 +9,7 @@ Skyscraper is an all-in-one ad management platform built for bloggers.
 
 == Description ==
 
-Thin plugin automatically includes Skyscraper.io javascript into your blog with a minimal configuration.
+Thin plugin automatically includes Skyscraper.io javascript into your blog with a minimal configuration. It also provides an easy way to embed Skyscraper media kit into your blog.
 
 == Installation ==
 
