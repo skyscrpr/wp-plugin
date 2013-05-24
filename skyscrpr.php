@@ -165,7 +165,7 @@ function update_post($post_id, $key,$value){
 
 function create_widget_page() {
   $skyscrpr_widget_page_id = get_option("skyscrpr_widget_page_id" );
-  if ($skyscrpr_widget_page_id) {
+  if ($skyscrpr_widget_page_id == false) {
     $new_page = array(
       'slug' => 'media-kit',
       'title' => 'Advertise Here',
