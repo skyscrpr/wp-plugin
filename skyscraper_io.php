@@ -58,7 +58,7 @@ function skyscraper_io_script() {
 ?>
   <!-- Skyscraper.io -->
         <script type="text/javascript" id="skyscraper_io-config-script">
-          var skyscraper_ioSettings = {
+          var skyscrprSettings = {
             site_id: '<?php print addslashes( $skyscraper_io_site_id ); ?>',
           };
         </script>
