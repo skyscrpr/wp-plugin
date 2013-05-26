@@ -219,8 +219,8 @@ function remove_widget() {
  * Initialize admin-specific hooks and settings
  */
 function skyscrpr_admin_init() {
-  wp_register_script( "skyscrpr_admin_script", WP_PLUGIN_URL . "/skyscraper/skyscrpr.js" );
-  wp_register_style( "skyscrpr_admin_style", WP_PLUGIN_URL . "/skyscraper/skyscrpr.css" );
+  wp_register_script( "skyscrpr_admin_script", plugins_url("skyscrpr.js", __FILE__));
+  wp_register_style( "skyscrpr_admin_style", plugins_url("skyscrpr.css", __FILE__));
 
   // register settings for the options page
   register_setting( "skyscrpr", "skyscrpr_site_id", "skyscrpr_sanitize_option" );
