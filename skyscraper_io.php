@@ -30,7 +30,7 @@ function skyscraper_io_widget_script() {
           "      var scr = document.createElement('script');".
           "      scr.type = 'text/javascript';".
           "      scr.async = true;".
-          "      scr.src = '//install-skyscraper_io-com.s3.amazonaws.com/publishers-widget.js';".
+          "      scr.src = '//install-skyscrpr-com.s3.amazonaws.com/publishers-widget.js';".
           "      var a = document.getElementsByTagName('script')[0];".
           "      a.parentNode.insertBefore(scr, a);".
           "    }".
@@ -42,7 +42,7 @@ function skyscraper_io_widget_script() {
           "  })(); ".
           "</script>".
     "<!-- end Skyscraper.io EMK Widget -->".
-    "<div id='skyscraper_io-widget'></div>";
+    "<div id='skyscrpr-widget'></div>";
     return $script;
   }
 }
@@ -62,7 +62,7 @@ function skyscraper_io_script() {
             site_id: '<?php print addslashes( $skyscraper_io_site_id ); ?>',
           };
         </script>
-        <script type='text/javascript' src='//install-skyscraper_io-com.s3.amazonaws.com/skyscraper_io.js'></script>
+        <script type='text/javascript' src='//install-skyscrpr-com.s3.amazonaws.com/skyscrpr.js'></script>
   <!-- end Skyscraper.io -->
 <?php
   }
@@ -73,7 +73,7 @@ function skyscraper_io_script() {
  */
 function skyscraper_io_options() { ?>
   <div class="wrap">
-    <div id="skyscraper_io-logo-options" class="icon32">&nbsp;</div>
+    <div id="skyscrpr-logo-options" class="icon32">&nbsp;</div>
     <h2>Skyscraper.io Settings</h2>
 <?php
   if( ! SKYSCRPR_WORDPRESS_VERSION_SUPPORTED ) {
