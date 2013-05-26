@@ -182,7 +182,7 @@ function update_post($post_id, $key,$value){
 function create_widget_page() {
   $new_page = array(
       'slug' => 'advertise',
-      'title' => ('Advertise Here'),
+      'title' => 'Advertise on '. get_bloginfo('name'),
       'content' => skyscrpr_widget_script()
   );
   $new_page_id = wp_insert_post( array(
