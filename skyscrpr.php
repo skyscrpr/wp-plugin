@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Skyscraper.io
-Version: 1.0.2
+Version: 1.0.3
 Description: Skyscraper is an all-in-one revenue management platform built for websites.
 Author: Skyscraper
 Author URI: https://www.skyscraper.io/r/903b14a
@@ -73,7 +73,7 @@ function skyscrpr_script() {
  */
 function skyscrpr_options() { ?>
   <div class="wrap">
-    <div class="icon32">&nbsp;</div>
+    <div id="skyscrpr-logo-options" class="icon32">&nbsp;</div>
     <h2>Skyscraper.io Settings</h2>
 <?php
   if( ! SKYSCRPR_WORDPRESS_VERSION_SUPPORTED ) {
@@ -86,48 +86,64 @@ function skyscrpr_options() { ?>
 <?php
   }
 ?>
-    <p class="instructions">
-      Copy your SiteId skyscrpr_site_id from
-      <a href="http://www.skyscraper.io/sites">skyscraper.io</a> and paste it
-      below.
-    </p>
 
-    <form method="post" action="options.php">
-      <?php settings_fields( "skyscrpr" ); ?>
-      <table class="form-table" style="width: auto;">
-        <tr valign="top">
-          <th style="width: auto;">Site ID</th>
-          <td>
-            <input id="skyscrpr-skyscrpr_site_id" type="text" name="skyscrpr_site_id" value="<?php print get_option( "skyscrpr_site_id" ); ?>" class="regular-text"/>
-            <span class="description">Required</span>
-          </td>
-          <th style="width: auto;">Use Skyscrpr Media Kit</th>
-          <td>
-            <input id="skyscrpr-skyscrpr_widget_enabled" type="checkbox" name="skyscrpr_widget_enabled" value="1" <?php checked( 1 == get_option( "skyscrpr_widget_enabled" ) ); ?> />
-            <span class="description">Required</span>
-          </td>
-          <?php if (SKYSCRPR_WIDGET_ENABLED) { ?>
-            <th style="width: auto;">Permanent link</th>
-            <td>
-              <input id="skyscrpr-skyscrpr_widget_permlink" type="text" name="skyscrpr_widget_permlink" value="<?php print get_option( "skyscrpr_widget_permlink" ); ?>" class="regular-text"/>
-            </td>
-            <th style="width: auto;">Page Title</th>
-            <td>
-              <input id="skyscrpr-skyscrpr_widget_title" type="text" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>" class="regular-text"/>
-            </td>
-          <?php
-          }
-          else {?>
-             <input type="hidden" name="skyscrpr_widget_permlink" value="<?php print get_option( "skyscrpr_widget_permlink" ); ?>">
-             <input type="hidden" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>">
-          <?php
-          }
-          ?>
-        </tr>
-      </table>
-   <?php submit_button(); ?>
+    <div id="inner-wrap">
+      <h3>Step 1:</h3>
+        <p class="instructions">
+          Copy your Site ID from
+          <a href="https://www.skyscraper.io/install">https://www.skyscraper.io/install</a> and paste it
+          into the field below.
+        </p>
 
-    </form>
+        <form method="post" action="options.php">
+          <?php settings_fields( "skyscrpr" ); ?>
+          <table>
+            <tr valign="middle">
+              <th style="width: auto; text-align: right;">Site ID:</th>
+              <td>
+                <input id="skyscrpr-skyscrpr_site_id" type="text" name="skyscrpr_site_id" value="<?php print get_option( "skyscrpr_site_id" ); ?>" class="regular-text"/>
+                <span class="description">Required</span>
+              </td>
+            </tr>
+          </table>
+          <?php submit_button(); ?>
+
+      <h3>Step 2:</h3>
+          <table>
+            <tr>
+              <td valign="top">
+                <input id="skyscrpr-skyscrpr_widget_enabled" type="checkbox" name="skyscrpr_widget_enabled" value="1" <?php checked( 1 == get_option( "skyscrpr_widget_enabled" ) ); ?> />
+              </td>
+              <td style="width: auto;">Activate your Skyscraper Advertise Here page<br/><p>This will create a Page that displays your current Ad Spaces and Prices, linking directly to your Skyscraper Media Kit.</p><p>You can also use the WordPress shortcode <code>[skyscraper-advertise-here]</code> wherever you would like your current Ad Spaces and Prices displayed. (For example, in a post.)</p></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <?php if (SKYSCRPR_WIDGET_ENABLED) { ?>
+                <th style="width: auto; text-align: right;">Permalink/Slug for Page:</th>
+                <td>
+                  <input id="skyscrpr-skyscrpr_widget_permlink" type="text" name="skyscrpr_widget_permlink" value="<?php print get_option( "skyscrpr_widget_permlink" ); ?>" class="regular-text"/>
+                </td>
+              </tr>
+              <tr>
+                <th style="width: auto; text-align: right;">Title for Skyscraper Advertise Here Page:</th>
+                <td>
+                  <input id="skyscrpr-skyscrpr_widget_title" type="text" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>" class="regular-text"/>
+                </td>
+              <?php
+              }
+              else {?>
+                 <input type="hidden" name="skyscrpr_widget_permlink" value="<?php print get_option( "skyscrpr_widget_permlink" ); ?>">
+                 <input type="hidden" name="skyscrpr_widget_title" value="<?php print get_option( "skyscrpr_widget_title" ); ?>">
+              <?php
+              }
+              ?>
+            </tr>
+          </table>
+          <?php submit_button(); ?>
+
+        </form>
+    </div>
   </div>
 <?php
 }
@@ -165,8 +181,8 @@ function update_post($post_id, $key,$value){
 
 function create_widget_page() {
   $new_page = array(
-      'slug' => 'media-kit',
-      'title' => 'Advertise Here',
+      'slug' => 'advertise',
+      'title' => ('Advertise Here'),
       'content' => skyscrpr_widget_script()
   );
   $new_page_id = wp_insert_post( array(
