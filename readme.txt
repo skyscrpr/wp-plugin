@@ -1,6 +1,6 @@
 === Skyscraper.io ===
 
-Contributors: rafaelchacon
+Contributors: rafaelchacon, jaacob
 Tags: revenue, ads, advertising, sales, sponsored, affiliate, marketing, links, monetization, easy
 Requires at least: 2.7
 Tested up to: 3.3.1
