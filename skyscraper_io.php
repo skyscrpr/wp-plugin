@@ -20,7 +20,7 @@ function skyscraper_io_widget_script() {
   if( $skyscraper_io_site_id ) {
     $script = "<!-- Skyscraper.io EMK Widget -->".
           "<script type='text/javascript'>".
-          "  var skyscraper_ioSettings = {".
+          "  var skyscrprSettings = {".
           "    site_id: '". addslashes( $skyscraper_io_site_id ). "',".
           "  };".
           "</script>".
