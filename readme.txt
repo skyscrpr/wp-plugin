@@ -35,15 +35,15 @@ We're working on this feature, including support for Ad Spaces as WordPress widg
 
 == Screenshots == 
 
-1. skyscraper-wp-plugin-1.png
+1. Skyscraper admin settings page.
 
 == Changelog ==
 
-= 1.0.2 =
-Improves how the Skyscraper javascript is injected
-
 = 1.0.3 =
 Improved Admin Styling
+
+= 1.0.2 =
+Improves how the Skyscraper javascript is injected
 
 == Upgrade Notice ==
 
