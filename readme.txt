@@ -23,7 +23,7 @@ This plugin is under active and frequent development.
 == Installation ==
 
 1. Create your [Skyscraper.io](https://www.skyscraper.io/r/903b14a) account (if you haven't already)
-2. Upload the `skyscraper` folder to `/wp-content/plugins/`
+2. Upload the `skyscraper_io` folder to `/wp-content/plugins/`
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. Configure the plugin in the WordPress Settings > Skyscraper menu
 
