@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Skyscraper.io
-Version: 1.0.4
+Version: 1.0.5
 Description: Skyscraper is an all-in-one revenue management platform built for websites.
 Author: Skyscraper
 Author URI: https://www.skyscraper.io/r/903b14a
@@ -24,7 +24,21 @@ function skyscraper_io_widget_script() {
           "    site_id: '". addslashes( $skyscraper_io_site_id ). "',".
           "  };".
           "</script>".
-          "<script src='//cloudfront-clientjs.s3.amazonaws.com/skyscrpr.js' type='text/javascript'>".
+          "  (function() {".
+          "    function async_load() {".
+          "      var scr = document.createElement('script');".
+          "      scr.type = 'text/javascript';".
+          "      scr.async = true;".
+          "      scr.src = '//install-skyscrpr-com.s3.amazonaws.com/publishers-widget.js';".
+          "      var a = document.getElementsByTagName('script')[0];".
+          "      a.parentNode.insertBefore(scr, a);".
+          "    }".
+          "    if (window.attachEvent) {".
+          "      window.attachEvent('onload', async_load);".
+          "    } else { ".
+          "      window.addEventListener('load', async_load, false);".
+          "    } ".
+          "  })(); ".
           "</script>".
     "<!-- end Skyscraper.io EMK Widget -->".
     "<div id='skyscrpr-widget'></div>";
@@ -47,7 +61,7 @@ function skyscraper_io_script() {
             site_id: '<?php print addslashes( $skyscraper_io_site_id ); ?>',
           };
         </script>
-        <script type='text/javascript' src='//install-skyscrpr-com.s3.amazonaws.com/skyscrpr.js'></script>
+        <script type='text/javascript' src='//cloudfront-clientjs.s3.amazonaws.com/skyscrpr.js'></script>
   <!-- end Skyscraper.io -->
 <?php
   }
