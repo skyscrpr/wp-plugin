@@ -3,7 +3,7 @@
 Contributors: rafaelchacon, jaacob
 Tags: revenue, ads, advertising, sales, sponsored, affiliate, marketing, links, monetization, easy
 Requires at least: 2.7
-Tested up to: 3.3.1
+Tested up to: 3.5.2
 Stable tag: 1.0.4
 License: GPLv2
 Donate link: -
@@ -40,7 +40,7 @@ We're working on this feature, including support for Ad Spaces as WordPress widg
 == Changelog ==
 
 = 1.0.4 =
-Improve the way skyscrpr javascript client is installed.
+Improve how Skyscraper's javascript client is installed.
 
 = 1.0.3 =
 Improved Admin Styling
@@ -49,6 +49,9 @@ Improved Admin Styling
 Improves how the Skyscraper javascript is injected
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Improved how Skyscraper's javascript client is installed.
 
 = 1.0.2 =
 Speed increases
