@@ -24,6 +24,7 @@ function skyscraper_io_widget_script() {
           "    site_id: '". addslashes( $skyscraper_io_site_id ). "',".
           "  };".
           "</script>".
+          "<script type='text/javascript'>".
           "  (function() {".
           "    function async_load() {".
           "      var scr = document.createElement('script');".
